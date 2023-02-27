@@ -5,8 +5,6 @@ function PokemonCard({mon}) {
 
   const [isClicked, setIsClicked]=useState(false)
 
-
-
   return (
     <Card onClick={()=>setIsClicked(!isClicked)}>
       <div>

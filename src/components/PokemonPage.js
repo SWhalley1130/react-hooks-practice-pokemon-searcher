@@ -19,11 +19,17 @@ function PokemonPage() {
  
   let searchedMons=pokemon.filter(mon=>mon.name.includes(searchName))
 
+  function submittedForm(newMon)
+  {
+    console.log(newMon)
+    setPokemon([...pokemon, newMon])
+  }
+
   return (
     <Container>
       <h1>Pokemon Searcher</h1>
       <br />
-      <PokemonForm />
+      <PokemonForm submittedForm={submittedForm} />
       <br />
       <Search setSeachName={setSeachName}/>
       <br />
